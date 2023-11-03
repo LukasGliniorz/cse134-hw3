@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <!-- Meta tags to provide additional information for search engines or social media websites. -->
     <meta property="og:title" content="Lukas Gliniorz">
     <meta name="description" content="Personal portfolio about career and education of Lukas Gliniorz.">
@@ -13,16 +14,12 @@
     <meta name="twitter:image" content="tum.webp">
     <title>Lukas Gliniorz</title>
     <link rel="icon" href="icon.png" type="image/png">
-    <style>
-        h1 {
-            color:darkcyan
-        }
-    </style>
 </head>
 <body>
     <header>
+        <h1>Lukas Gliniorz</h1>
         <nav>
-            <ul>
+            <ul list-style: none>
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="/downloads.html">Downloads</a></li>
                 <li><a href="/contact.html">Contact</a></li>
@@ -31,23 +28,15 @@
         </nav>
     </header>
     <main>
-        <h1>Lukas Gliniorz</h1>
-        <section>
+        <section id="about">
             <h2>About me</h2>
             <p>
                 My name is <i>Lukas Gliniorz</i> and I am studying <em>Automotive Engineering</em> at the <span class="highlight">Technical University of Munich</span>.
             </p>
         </section>
-        <section>
+        <section id="education">
             <h2>Education</h2>
             <h3>University of California, San Diego</h3>
-            <!-- Template to later add classes to the table of classes I take -->
-            <template id="add_class">
-                <tr>
-                    <td class="add_class"></td>
-                    <td></td>
-                </tr>
-            </template>
             <table>
                 <caption>I take the following courses this quarter:</caption>
                 <colgroup>
@@ -96,7 +85,7 @@
             </video>
             <h3>Gymnasium Korntal-Münchingen</h3>
         </section>
-        <section>
+        <section id="work experience">
             <h2>Work Experience</h2>
             <h3>Internship at MAN Truck & Bus</h3>
             <p>Internship in the department of human-machine interface at MAN Truck & Bus in Munich, Germany.
@@ -108,7 +97,7 @@
             <h3>Internship at Widmann</h3>
             <p>Internship in the department of tool production at Widmann in Schwieberdingen, Germany.</p>
         </section>
-        <section>
+        <section id="skills">
             <h2>Skills</h2>
             <table>
                 <tr>
@@ -147,7 +136,7 @@
             </table>
                                  
         </section>
-        <section>
+        <section id="extracurricular activities">
             <h2>Extracurricular Activities</h2>
             <ol>
                 <li>Member in the autonomous team of TUfast Eco</li>
