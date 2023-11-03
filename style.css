@@ -1,9 +1,24 @@
+:root {
+    --primary-color: color(display-p3 0.1804 0.8000 0.4431); /* wide-gamut color */ 
+    --text-color: #333;
+    --background-color: #f4f4f4; /* Fallback if wide-gamut is not supported */
+    --link-color: #0645ad;
+    --link-hover-color: #0b0080;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif; /* Custom font with fallback */
     margin: 0;
-    padding: 20px;
-    background-color: #f4f4f4;
-    color: #333
+    /* padding: 20px; */
+    background-color: var(--background-color);
+    color: var(--text-color, black); /* Fallback */
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('fonts/') format('truetype');
+    font-weight: 400;
+    font-style: normal;
 }
 
 header {
