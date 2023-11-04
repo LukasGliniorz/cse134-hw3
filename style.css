@@ -175,15 +175,15 @@ section {
 }
   
 /* New Selectors */
-nav ul li a:has(> .active) {
-    border-bottom: 2px solid var(--link-color);
-}
+section:has(img) {
+    border: 1px solid blue;
+  }
   
 /* Example of Scoped CSS with Nesting */
 section#about {
     --section-background: #e7f3fe;
   
-    & h3 {
+    & h2 {
       color: var(--primary-color);
     }
   
