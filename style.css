@@ -3,11 +3,18 @@
     --text-color: #333;
     --background-color: #f4f4f4; /* Fallback if wide-gamut is not supported */
     --link-color: #0645ad;
-    --link-hover-color: #0b0080;
+    /* --link-hover-color: #0b0080; */ */
+}
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Open Sans', sans-serif; /* Custom font with fallback */
+    font-family: 'Open Sans', sans-serif; /*Custom font with fallback */
     margin: 0;
     /* padding: 20px; */
     background-color: var(--background-color);
@@ -16,51 +23,194 @@ body {
 
 @font-face {
     font-family: 'Open Sans';
-    src: url('fonts/') format('truetype');
+    src: url('fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
 
 header {
-    background-color: #333;
+    /* display: flex; */
+    justify-content: space-between;
+    background-color: var(--primary-color);
     color: #fff;
     text-align: center;
-    padding: 20px;
+    align-items: center;
+    padding: 1rem 0;
+    margin: 1rem;
 }
 
 h1 {
-    font-size: 36px;
-    margin-bottom: 5px;
+    padding: 1rem 0;
 }
 
 nav ul {
-    background-color: #555;
+    display: flex;
+    list-style: none;
+    padding: 1rem 0;
+    background: #555;
     overflow: hidden;
 }
 
 nav ul li {
-    display: inline;
+    margin: 0;
 }
-
+  
+nav ul li:not(:last-child) {
+    margin-right: 1rem;
+}
+  
 nav ul li a {
-    color: #fff;
-    padding: 10px 20px;
-    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    padding: 1rem 2rem;
 }
-
+  
 nav ul li a:hover {
-    background: #666;
+    color: var(--link-hover-color);
+    background-color: #666;
 }
-
+  
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+  
 section {
-    padding: 20px;
-    margin-bottom: 20px;
-    background: #fff;
+    background: white;
+    padding: 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+  
+section:hover {
+    transform: translateY(-5px);
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
+#about {
+    grid-column: 1 / -1;
+}
+
+/* Hamburger Menu Styles */
+.toggle-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.toggle-menu:before {
+    content: "\2630"; /* Unicode character for hamburger icon */
+    font-size: 24px;
+}
+
+#toggle-1 {
+    display: none;
+}
+  
+/* Responsive design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+    
+nav ul {
+    flex-direction: column;
+    align-items: center;
+    }
+    
+    nav ul li:not(:last-child) {
+        margin-bottom: 0.5rem;
+    }
+    
+    main {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Styles for mobile screens */
+@media (max-width: 480px) {
+    .toggle-menu {
+        display: block; /* Show hamburger menu */
+        /* Additional styling for the menu button */
+    }
+
+    nav ul {
+        display: none; /* Hide the menu initially */
+        /* Additional styling for the mobile menu */
+    }
+
+    #toggle-1:checked + ul {
+        display: block; /* Show menu when checkbox is checked */
+    }
+
+    /* Make the nav elements full-width */
+    nav ul li {
+        display: block;
+        width: 100%;
+    }
+
+    /* Style for the links to make them look good as full-width buttons */
+    nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 15px 0;
+        border-bottom: 1px solid #ddd; /* Add a border or any other styles for the menu items */
+    }
+}
+  
+/* CSS Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+  
+section {
+    animation: fadeIn 1s ease-out;
+}
+  
+/* New Selectors */
+nav ul li a:has(> .active) {
+    border-bottom: 2px solid var(--link-color);
+}
+  
+/* Example of Scoped CSS with Nesting */
+section#about {
+    --section-background: #e7f3fe;
+  
+    & h3 {
+      color: var(--primary-color);
+    }
+  
+    & p {
+      font-size: 0.9rem;
+    }
+  
+    background-color: var(--section-background);
+}
+  
+/* Relative Units */
+h1 {
+    font-size: 2rem; /* 2 times the root element's font-size */
+}
+  
+p {
+    font-size: 1rem; /* Base font-size */
+}
+  
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
+}
+  
+/* Dynamic Viewport Units */
+footer p {
+    font-size: clamp(12px, 2vw, 18px);
     text-align: center;
-    padding: 20px;
+    padding: 2vw;
 }
