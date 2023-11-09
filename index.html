@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" media="all" type="text/css">
     <!-- Meta tags to provide additional information for search engines or social media websites. -->
     <meta property="og:title" content="Lukas Gliniorz">
     <meta name="description" content="Personal portfolio about career and education of Lukas Gliniorz.">
@@ -20,8 +20,8 @@
         <h1>Lukas Gliniorz</h1>
         <nav>
             <label for="toggle-1" class="toggle-menu">Menu</label>
-            <input type="checkbox" id="toggle-1"/>
-            <ul list-style: none>
+            <input type="checkbox" id="toggle-1">
+            <ul>
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="/downloads.html">Downloads</a></li>
                 <li><a href="/contact.html">Contact</a></li>
@@ -33,7 +33,7 @@
         <section id="about">
             <h2>About me</h2>
             <p>
-                My name is <i>Lukas Gliniorz</i> and I am studying <em>Automotive Engineering</em> at the <span class="highlight">Technical University of Munich</span>.
+                My name is <em>Lukas Gliniorz</em> and I am studying Automotive Engineering at the Technical University of Munich.
             </p>
         </section>
         <section id="education">
@@ -44,32 +44,38 @@
             </p><br>
 
             <h3>Aston University, Birmingham</h3>
-            <p><b>Exchange semester </b>at <strong>Aston University</strong> from September 2020 to January 2021.</p>
-            
-            <picture>
-                <source media="(max-width: 768px)" srcset="aston_small.webp" type="image/webp">
-                <source media="(min-width: 769px)" srcset="aston.webp" type="image/webp">
-                <source media="(max-width: 768px)" srcset="aston_small.jpg" type="image/jpeg">
-                <source srcset="aston.jpg" type="image/jpeg">
-                <img src="aston.jpg" alt="campus of Aston University" style="object-fit: cover; object-position: center;">
-            </picture>
-            <p>I took courses in Advanced Programming, ...</p><br>
+            <p><b>Exchange semester </b>at <strong>Aston University</strong> from September 2020 to January 2021.
+                 I took courses in Advanced Programming and Finite Element Analysis.</p>
+            <figure>
+                <picture>
+                    <source media="(max-width: 768px)" srcset="aston_small.webp" type="image/webp">
+                    <source media="(min-width: 769px)" srcset="aston.webp" type="image/webp">
+                    <source media="(max-width: 768px)" srcset="aston_small.jpg" type="image/jpeg">
+                    <source srcset="aston.jpg" type="image/jpeg">
+                    <img src="aston.jpg" alt="campus of Aston University" style="object-fit: cover; object-position: center;">
+                </picture>
+                <figcaption>Photo of the campus courtesy of <cite>Aston University</cite>.</figcaption>
+            </figure><br>
+
             <h3>Technical University of Munich</h3>
             <p>I started my studies at the Technical University of Munich in October 2017. Since then I finished my Bachelor's degree in 
                 Mechanical Engineering. Afterwards I started my Master's studies in Automotive Engineering.
             </p>
-            <picture>
-                <source media="(max-width: 768px)" srcset="tum_small.webp" type="image/webp">
-                <source media="(min-width: 769px)" srcset="tum.webp" type="image/webp">
-                <source media="(max-width: 768px)" srcset="tum_small.jpg" type="image/jpeg">
-                <source srcset="tum.jpg" type="image/jpeg">
-                <img src="tum.jpg" alt="campus of Technical University of Munich" style="object-fit: cover; object-position: center;">
-            </picture>
+            <figure>
+                <picture>
+                    <source media="(max-width: 768px)" srcset="tum_small.webp" type="image/webp">
+                    <source media="(min-width: 769px)" srcset="tum.webp" type="image/webp">
+                    <source media="(max-width: 768px)" srcset="tum_small.jpg" type="image/jpeg">
+                    <source srcset="tum.jpg" type="image/jpeg">
+                    <img src="tum.jpg" alt="campus of Technical University of Munich" style="object-fit: cover; object-position: center;">
+                </picture>
+                <figcaption>Photo of the campus courtesy of <cite>Aston University</cite>.</figcaption>
+            </figure><br>
             
             <h3>Gymnasium Korntal-Münchingen</h3>
             <p>From September 2008 to July 2016, I attended the Gymnasium Korntal-Münchingen. My advanced courses were English, math, German, physics and geography.</p>
         </section>
-        <section id="work experience">
+        <section id="work_experience">
             <h2>Work Experience</h2>
             <h3>Internship at MAN Truck & Bus</h3>
             <p>Internship in the department of human-machine interface at MAN Truck & Bus in Munich, Germany.
@@ -117,10 +123,9 @@
                         </svg>
                     </td>
                 </tr>
-            </table>
-                                 
+            </table>                            
         </section>
-        <section id="extracurricular activities">
+        <section id="extracurricular_activities">
             <h2>Extracurricular Activities</h2>
             <ol>
                 <li>Member in the autonomous team of TUfast Eco</li>
@@ -133,5 +138,4 @@
         <p>Made by Lukas Gliniorz, 2023</p>
     </footer>    
 </body>
-
 </html>
