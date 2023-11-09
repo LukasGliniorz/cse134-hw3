@@ -46,23 +46,28 @@
             <h3>Aston University, Birmingham</h3>
             <p><b>Exchange semester </b>at <strong>Aston University</strong> from September 2020 to January 2021.</p>
             
-            <img src="aston.jpg" alt="campus of Aston University">
-            <p>I took courses in Advanced Programming, ...</p>
-            <audio src="gb.mp3" controls>
-                Your browser does not support the audio tag.
-            </audio>
+            <picture>
+                <source media="(max-width: 768px)" srcset="aston_small.webp" type="image/webp">
+                <source media="(min-width: 769px)" srcset="aston.webp" type="image/webp">
+                <source media="(max-width: 768px)" srcset="aston_small.jpg" type="image/jpeg">
+                <source srcset="aston.jpg" type="image/jpeg">
+                <img src="aston.jpg" alt="campus of Aston University" style="object-fit: cover; object-position: center;">
+            </picture>
+            <p>I took courses in Advanced Programming, ...</p><br>
             <h3>Technical University of Munich</h3>
             <p>I started my studies at the Technical University of Munich in October 2017. Since then I finished my Bachelor's degree in 
                 Mechanical Engineering. Afterwards I started my Master's studies in Automotive Engineering.
             </p>
             <picture>
-                <source type="image/webp" srcset="tum.webp">
-                <img src="tum.webp" alt="campus of Technical University of Munich" style="object-fit: cover; object-position: center;">
+                <source media="(max-width: 768px)" srcset="tum_small.webp" type="image/webp">
+                <source media="(min-width: 769px)" srcset="tum.webp" type="image/webp">
+                <source media="(max-width: 768px)" srcset="tum_small.jpg" type="image/jpeg">
+                <source srcset="tum.jpg" type="image/jpeg">
+                <img src="tum.jpg" alt="campus of Technical University of Munich" style="object-fit: cover; object-position: center;">
             </picture>
-            <video src="tum.mp4" width="640" height="360" controls>
-                Your browser does not support the video tag.
-            </video>
+            
             <h3>Gymnasium Korntal-Münchingen</h3>
+            <p>From September 2008 to July 2016, I attended the Gymnasium Korntal-Münchingen. My advanced courses were English, math, German, physics and geography.</p>
         </section>
         <section id="work experience">
             <h2>Work Experience</h2>
@@ -70,9 +75,9 @@
             <p>Internship in the department of human-machine interface at MAN Truck & Bus in Munich, Germany.
                 My tasks included maintaining the driving simulator, implementing and testing of HMI applications in Python, and planning and 
                 implementing of test tracks using the software SILAB for demonstrative purposes.
-            </p>
+            </p><br>
             <h3>Internship at Trumpf</h3>
-            <p>Internship in the department of additive manufacturing at Trumpf in Ditzingen, Germany.</p>
+            <p>Internship in the department of additive manufacturing at Trumpf in Ditzingen, Germany.</p><br>
             <h3>Internship at Widmann</h3>
             <p>Internship in the department of tool production at Widmann in Schwieberdingen, Germany.</p>
         </section>
@@ -119,14 +124,11 @@
             <h2>Extracurricular Activities</h2>
             <ol>
                 <li>Member in the autonomous team of TUfast Eco</li>
-                <li>PA for the course Software Development for Engineers</li>
+                <li>TA for the course Software Development for Engineers</li>
                 <li>Onboard courier for stem cells</li>
             </ol>
         </section>
     </main>
-    <aside>
-
-    </aside>
     <footer>
         <p>Made by Lukas Gliniorz, 2023</p>
     </footer>    
